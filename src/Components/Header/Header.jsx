@@ -1,11 +1,12 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Banner from "../Banner";
 
-
-const Header = () => {
+const Header = ({ coins, addCoins }) => {
   return (
     <header>
-      <Navbar></Navbar>
+      <Navbar coins={coins} />
+      <Banner addCoins={addCoins} />
     </header>
   );
 };
