@@ -7,7 +7,7 @@ function App() {
   const [coins, setCoins] = useState(0);
 
   const addCoins = () => {
-    setCoins(coins + 50000000); 
+    setCoins(coins + 50000000);
   };
 
   return (
