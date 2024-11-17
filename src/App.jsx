@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import "font-awesome/css/font-awesome.min.css";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   const [coins, setCoins] = useState(0);
@@ -28,6 +29,7 @@ const App = () => {
     <>
       <Header coins={coins} addCoins={addCoins} />
       <Main choosePlayer={choosePlayer} selectedPlayers={selectedPlayers} />
+      <Footer></Footer>
     </>
   );
 };
