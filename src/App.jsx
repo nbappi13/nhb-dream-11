@@ -13,8 +13,14 @@ const App = () => {
   };
 
   const choosePlayer = (player) => {
-    if (!selectedPlayers.includes(player)) {
+    if (coins < player.biddingPrice) {
+      alert("Not enough money to buy this player. Claim some credit!");
+      return;
+    }
+
+    if (!selectedPlayers.some(p => p.playerId === player.playerId)) {
       setSelectedPlayers([...selectedPlayers, player]);
+      setCoins(coins - player.biddingPrice);
     }
   };
 

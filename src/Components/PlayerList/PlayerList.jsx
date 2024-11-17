@@ -1,21 +1,15 @@
+
 import React from 'react';
 import PropTypes from 'prop-types'; 
 import PlayerCard from '../PlayerCard/PlayerCard';
 import './PlayerList.css';
 
 const PlayerList = ({ players, choosePlayer }) => {
-
-  const safePlayers = Array.isArray(players) ? players : [];
-
   return (
     <div className="player-list">
-      {safePlayers.length > 0 ? (
-        safePlayers.map(player => (
-          <PlayerCard key={player.playerId} player={player} choosePlayer={choosePlayer} />
-        ))
-      ) : (
-        <p className="no-players">No players available</p> 
-      )}
+      {players.map(player => (
+        <PlayerCard key={player.playerId} player={player} choosePlayer={choosePlayer} />
+      ))}
     </div>
   );
 };
