@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types';
 import PlayerList from '../PlayerList/PlayerList';
+import SelectedPlayers from '../SelectedPlayers/SelectedPlayers';
 import './Main.css';
 
 const Main = ({ choosePlayer, selectedPlayers }) => {
@@ -14,26 +15,31 @@ const Main = ({ choosePlayer, selectedPlayers }) => {
       .catch(error => console.error('Error fetching player data:', error));
   }, []);
 
-  const filteredPlayers = view === 'available' ? players : selectedPlayers;
+  const filteredPlayers = view === 'available' ? players : [];
 
   return (
     <div className="main-section">
-      <h2 className='font-bold text-2xl text-black'>Available Players</h2>
+      <h2 className='font-bold text-2xl text-black'>Player List</h2>
       <div className="button-group">
         <button onClick={() => setView('available')}>Available</button>
-        <button onClick={() => setView('selected')}>Selected ({selectedPlayers.length})</button>
+        <button onClick={() => setView('selected')}>
+          Selected ({selectedPlayers.length})
+        </button>
       </div>
-      <PlayerList players={filteredPlayers} choosePlayer={choosePlayer} />
+      {view === 'available' && (
+        <PlayerList players={filteredPlayers} choosePlayer={choosePlayer} />
+      )}
+      {view === 'selected' && (
+        <SelectedPlayers selectedPlayers={selectedPlayers} />
+      )}
     </div>
   );
 };
-
 
 Main.defaultProps = {
   choosePlayer: () => console.warn('choosePlayer function not provided'),
   selectedPlayers: [],
 };
-
 
 Main.propTypes = {
   choosePlayer: PropTypes.func,

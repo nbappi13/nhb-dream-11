@@ -16,7 +16,7 @@ const PlayerCard = ({ player, choosePlayer }) => {
 
   return (
     <div className="player-card">
-      <img src={player.image} alt={player.name} className="player-image" />
+      <img src={player.image} alt={player.name} className="card-player-image" />
       <div className="player-details">
         <div className="top-section">
           <div className="left-section">
