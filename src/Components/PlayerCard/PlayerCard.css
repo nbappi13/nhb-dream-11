@@ -1,0 +1,116 @@
+.player-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 15px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .player-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .player-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .player-details {
+    padding: 15px;
+  }
+  
+  .top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .right-section {
+    text-align: right;
+  }
+  
+  .player-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .player-name i {
+    margin-right: 5px;
+    color: #007bff;
+  }
+  
+  .player-country {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .country-flag {
+    margin-right: 5px;
+  }
+  
+  .player-role {
+    background-color: #e0f7fa;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: #00796b;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .divider {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+  }
+  
+  .bottom-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .player-rating, .player-batting, .player-bowling, .player-price {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .player-rating span, .player-batting span, .player-bowling span, .player-price span {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .choose-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .choose-button:hover {
+    background-color: #0056b3;
+  }
+  

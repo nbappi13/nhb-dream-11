@@ -1,0 +1,42 @@
+.player-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+  
+  .player-card {
+    
+     box-sizing: border-box;
+  }
+  
+  .player-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .player-card h3 {
+    margin: 10px 0 5px;
+  }
+  
+  .player-card p {
+    margin: 5px 0;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
