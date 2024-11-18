@@ -1,8 +1,17 @@
-# React + Vite
+# Build Your Dream 11
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+Welcome to the Build Your Dream 11 Platform, where users can select their favorite cricket players, manage their team, and get updates in real-time. This platform provides an interactive and seamless experience for cricket enthusiasts to curate their ultimate team of players.
 
-Currently, two official plugins are available:
+## Technologies Used
+- React.js
+- PropTypes
+- React Toastify
+- CSS
+- HTML
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Features
+1. **Dynamic Player Management**
+2. **Interactive UI**
+3. **Data Validation and Alerts**
+
