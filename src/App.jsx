@@ -19,7 +19,7 @@ const App = () => {
       return;
     }
 
-    if (selectedPlayers.some(p => p.playerId === player.playerId)) {
+    if (selectedPlayers.some((p) => p.playerId === player.playerId)) {
       toast.warn("Player already selected.");
       return;
     }
@@ -31,7 +31,7 @@ const App = () => {
 
     setSelectedPlayers([...selectedPlayers, player]);
     setCoins(coins - player.biddingPrice);
-    toast.success(`Now ${player.name} is in your team`);
+    toast.success(`congratulations!!!\nNow ${player.name} is in your team`);
   };
 
   const deletePlayer = (playerId) => {
@@ -46,10 +46,10 @@ const App = () => {
   return (
     <>
       <Header coins={coins} addCoins={addCoins} />
-      <Main 
-        choosePlayer={choosePlayer} 
-        selectedPlayers={selectedPlayers} 
-        deletePlayer={deletePlayer} 
+      <Main
+        choosePlayer={choosePlayer}
+        selectedPlayers={selectedPlayers}
+        deletePlayer={deletePlayer}
       />
       <Footer />
     </>
