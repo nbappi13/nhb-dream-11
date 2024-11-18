@@ -20,10 +20,12 @@ const Footer = () => {
           <div className="footer-column">
             <h4 className="text-slate-100">Quick Links</h4>
             <ul>
+              <a href="#">
               <li>Home</li>
               <li>Services</li>
               <li>About</li>
               <li>Contact</li>
+              </a>
             </ul>
           </div>
           <div className="footer-column">

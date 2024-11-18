@@ -1,6 +1,9 @@
 .main-section {
+  background-color: #f3e5f5;
   padding: 20px;
+  border-radius: 8px;
 }
+
 
 .header {
   display: flex;
@@ -33,5 +36,5 @@
 }
 
 .add-more-button:hover {
-  background-color: #0056b3;
+  background-color: orange;
 }

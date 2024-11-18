@@ -20,7 +20,7 @@ const Main = ({ choosePlayer, selectedPlayers, deletePlayer }) => {
   return (
     <div className="main-section">
       <div className="header">
-        <h2 className='font-bold text-2xl text-black'>Player List</h2>
+        <h2 className='font-bold text-3xl text-black'>Players List</h2>
         <div className="button-group">
           <button onClick={() => setView('available')}>Available</button>
           <button onClick={() => setView('selected')}>

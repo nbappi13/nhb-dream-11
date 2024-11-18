@@ -29,7 +29,7 @@ const SelectedPlayers = ({ selectedPlayers, deletePlayer }) => {
           </div>
         ))
       ) : (
-        <p>No players selected.</p>
+        <p className="font-bold text-red-400 text-3xl">📢 No players selected right now.📢 </p>
       )}
     </div>
   );
