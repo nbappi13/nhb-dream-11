@@ -1,10 +1,13 @@
 import React from "react";
+import logo from '../../assets/logo.png'; 
+
 
 const Navbar = ({ coins }) => {
   return (
     <nav className="flex items-center justify-between px-6 py-4 bg-blue-950">
       <div className="flex items-center space-x-3">
-        <img src="/src/assets/logo.png" alt="Logo" className="h-10 w-10" />
+      <img src={logo} alt="Logo" className="h-10 w-10" />
+
         <span className="text-xl font-bold italic text-white cursor-pointer">
           NHB CRIČ
         </span>

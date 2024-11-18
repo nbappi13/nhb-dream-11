@@ -1,11 +1,12 @@
 import React from "react";
 import "./Banner.css";
+import bannerMain from '../../assets/banner-main.png';
 import { toast } from "react-toastify";
 
 const Banner = ({ addCoins }) => {
   const handleClaimClick = () => {
-    addCoins(); // Calls the addCoins function
-    toast.success("You claimed 5000000!"); // Displays a toast message
+    addCoins(); 
+    toast.success("You claimed 5000000!"); 
   };
 
   return (
@@ -17,8 +18,8 @@ const Banner = ({ addCoins }) => {
       />
       <div className="content-container">
         <img
-          src="/src/assets/banner-main.png"
-          alt="Banner Main"
+          src={bannerMain} 
+          alt="Banner Main" 
           className="banner-main"
         />
         <div className="text-container">
