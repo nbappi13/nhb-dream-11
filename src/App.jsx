@@ -14,16 +14,24 @@ const App = () => {
   };
 
   const choosePlayer = (player) => {
+    if (selectedPlayers.length >= 6) {
+      toast.warn("You cannot choose more than 6 players.");
+      return;
+    }
+
+    if (selectedPlayers.some(p => p.playerId === player.playerId)) {
+      toast.warn("Player already selected.");
+      return;
+    }
+
     if (coins < player.biddingPrice) {
       toast.warn("Not enough money to buy this player. Claim some credit!");
       return;
     }
 
-    if (!selectedPlayers.some(p => p.playerId === player.playerId)) {
-      setSelectedPlayers([...selectedPlayers, player]);
-      setCoins(coins - player.biddingPrice);
-      toast.success(`Now ${player.name} is in your team`);
-    }
+    setSelectedPlayers([...selectedPlayers, player]);
+    setCoins(coins - player.biddingPrice);
+    toast.success(`Now ${player.name} is in your team`);
   };
 
   const deletePlayer = (playerId) => {

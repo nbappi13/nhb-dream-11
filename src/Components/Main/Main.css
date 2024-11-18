@@ -2,10 +2,15 @@
   padding: 20px;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .button-group {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px;
 }
 
 .button-group button {
@@ -24,7 +29,7 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-bottom: 120px;
+  margin-bottom: 140px;
 }
 
 .add-more-button:hover {

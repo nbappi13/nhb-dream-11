@@ -19,18 +19,21 @@ const Main = ({ choosePlayer, selectedPlayers, deletePlayer }) => {
 
   return (
     <div className="main-section">
-      <h2 className='font-bold text-2xl text-black'>Player List</h2>
-      <div className="button-group">
-        <button onClick={() => setView('available')}>Available</button>
-        <button onClick={() => setView('selected')}>
-          Selected ({selectedPlayers.length})
-        </button>
+      <div className="header">
+        <h2 className='font-bold text-2xl text-black'>Player List</h2>
+        <div className="button-group">
+          <button onClick={() => setView('available')}>Available</button>
+          <button onClick={() => setView('selected')}>
+            Selected ({selectedPlayers.length})
+          </button>
+        </div>
       </div>
       {view === 'available' && (
         <PlayerList players={filteredPlayers} choosePlayer={choosePlayer} />
       )}
       {view === 'selected' && (
         <>
+          <h2 className='font-bold text-2xl text-black'>Selected Player {selectedPlayers.length}/6</h2>
           <SelectedPlayers selectedPlayers={selectedPlayers} deletePlayer={deletePlayer} />
           <button className="add-more-button" onClick={() => setView('available')}>Add More Players</button>
         </>
