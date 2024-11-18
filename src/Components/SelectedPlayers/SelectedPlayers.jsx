@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './SelectedPlayers.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "./SelectedPlayers.css";
 
-const SelectedPlayers = ({ selectedPlayers }) => {
+const SelectedPlayers = ({ selectedPlayers, deletePlayer }) => {
   return (
     <div className="selected-players">
       {selectedPlayers.length > 0 ? (
-        selectedPlayers.map(player => (
+        selectedPlayers.map((player) => (
           <div key={player.playerId} className="selected-player-card">
             <div className="player-info">
               <img
@@ -20,7 +20,12 @@ const SelectedPlayers = ({ selectedPlayers }) => {
                 <p>Price: ${player.biddingPrice.toLocaleString()}</p>
               </div>
             </div>
-            <button className="delete-button">Delete</button>
+            <button
+              className="delete-button"
+              onClick={() => deletePlayer(player.playerId)} 
+            >
+              Delete
+            </button>
           </div>
         ))
       ) : (
@@ -40,7 +45,8 @@ SelectedPlayers.propTypes = {
       biddingPrice: PropTypes.number.isRequired,
       image: PropTypes.string,
     })
-  ),
+  ).isRequired,
+  deletePlayer: PropTypes.func.isRequired,
 };
 
 export default SelectedPlayers;

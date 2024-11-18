@@ -4,7 +4,7 @@ import PlayerList from '../PlayerList/PlayerList';
 import SelectedPlayers from '../SelectedPlayers/SelectedPlayers';
 import './Main.css';
 
-const Main = ({ choosePlayer, selectedPlayers }) => {
+const Main = ({ choosePlayer, selectedPlayers, deletePlayer }) => {
   const [view, setView] = useState('available');
   const [players, setPlayers] = useState([]);
 
@@ -15,7 +15,7 @@ const Main = ({ choosePlayer, selectedPlayers }) => {
       .catch(error => console.error('Error fetching player data:', error));
   }, []);
 
-  const filteredPlayers = view === 'available' ? players : [];
+  const filteredPlayers = view === 'available' ? players : selectedPlayers;
 
   return (
     <div className="main-section">
@@ -30,7 +30,7 @@ const Main = ({ choosePlayer, selectedPlayers }) => {
         <PlayerList players={filteredPlayers} choosePlayer={choosePlayer} />
       )}
       {view === 'selected' && (
-        <SelectedPlayers selectedPlayers={selectedPlayers} />
+        <SelectedPlayers selectedPlayers={selectedPlayers} deletePlayer={deletePlayer} />
       )}
     </div>
   );
@@ -39,11 +39,13 @@ const Main = ({ choosePlayer, selectedPlayers }) => {
 Main.defaultProps = {
   choosePlayer: () => console.warn('choosePlayer function not provided'),
   selectedPlayers: [],
+  deletePlayer: () => console.warn('deletePlayer function not provided'),
 };
 
 Main.propTypes = {
   choosePlayer: PropTypes.func,
   selectedPlayers: PropTypes.arrayOf(PropTypes.object),
+  deletePlayer: PropTypes.func,
 };
 
 export default Main;

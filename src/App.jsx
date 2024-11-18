@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
-import "font-awesome/css/font-awesome.min.css";
 import Footer from "./Components/Footer/Footer";
 import { toast } from "react-toastify";
 
@@ -27,10 +26,23 @@ const App = () => {
     }
   };
 
+  const deletePlayer = (playerId) => {
+    const player = selectedPlayers.find((p) => p.playerId === playerId);
+    const updatedPlayers = selectedPlayers.filter(
+      (player) => player.playerId !== playerId
+    );
+    setSelectedPlayers(updatedPlayers);
+    toast.success(`${player.name} removed from your team.`);
+  };
+
   return (
     <>
       <Header coins={coins} addCoins={addCoins} />
-      <Main choosePlayer={choosePlayer} selectedPlayers={selectedPlayers} />
+      <Main 
+        choosePlayer={choosePlayer} 
+        selectedPlayers={selectedPlayers} 
+        deletePlayer={deletePlayer} 
+      />
       <Footer />
     </>
   );
