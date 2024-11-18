@@ -30,7 +30,10 @@ const Main = ({ choosePlayer, selectedPlayers, deletePlayer }) => {
         <PlayerList players={filteredPlayers} choosePlayer={choosePlayer} />
       )}
       {view === 'selected' && (
-        <SelectedPlayers selectedPlayers={selectedPlayers} deletePlayer={deletePlayer} />
+        <>
+          <SelectedPlayers selectedPlayers={selectedPlayers} deletePlayer={deletePlayer} />
+          <button className="add-more-button" onClick={() => setView('available')}>Add More Players</button>
+        </>
       )}
     </div>
   );
