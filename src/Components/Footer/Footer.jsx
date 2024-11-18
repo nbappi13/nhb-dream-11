@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import Newsletter from "../Newsletter/Newsletter"; // Import the Newsletter component
-import logoFooter from "../../assets/logo-footer.png"; // Import the logo image
+import Newsletter from "../Newsletter/Newsletter"; 
+import logoFooter from "../../assets/logo-footer.png"; 
 
 const Footer = () => {
   return (

@@ -1,7 +1,13 @@
 import React from "react";
 import "./Banner.css";
+import { toast } from "react-toastify";
 
 const Banner = ({ addCoins }) => {
+  const handleClaimClick = () => {
+    addCoins(); // Calls the addCoins function
+    toast.success("You claimed 5000000!"); // Displays a toast message
+  };
+
   return (
     <div className="banner-container">
       <img
@@ -18,7 +24,7 @@ const Banner = ({ addCoins }) => {
         <div className="text-container">
           <h1>Assemble Your Ultimate Dream 11 Cricket Team</h1>
           <h2>Beyond Boundaries, Beyond Limits</h2>
-          <button onClick={addCoins}>Claim Free Credit</button>
+          <button onClick={handleClaimClick}>Claim Free Credit</button>
         </div>
       </div>
     </div>

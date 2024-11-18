@@ -4,7 +4,7 @@
     text-align: center;
     background: linear-gradient(to right, #039910, #ff7f00);
     background-color: rgb(255, 255, 255);
-    background-image: url('/src/assets/bg-shadow.png'); /* Use the background image */
+    background-image: url('/src/assets/bg-shadow.png'); 
     background-size: cover;
     padding: 40px 10px;
     border-radius: 10px;
